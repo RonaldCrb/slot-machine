@@ -9,29 +9,22 @@ export const state = () => ({
 
 export const mutations = {
   SET_SLOTS(state, payload) {
-    state.value1 = payload.value1
-    state.value2 = payload.value2
-    state.value3 = payload.value3
-    state.value4 = payload.value4
-    state.value5 = payload.value5
+    state.value1 = payload[0]
+    state.value2 = payload[1]
+    state.value3 = payload[2]
+    state.value4 = payload[3]
+    state.value5 = payload[4]
   }
 }
 
 export const actions = {
   spin({ commit }) {
     const options = { min: 1, max: 6, integer: true }
-    const value1 = rn(options)
-    const value2 = rn(options)
-    const value3 = rn(options)
-    const value4 = rn(options)
-    const value5 = rn(options)
-    const payload = {
-      value1,
-      value2,
-      value3,
-      value4,
-      value5
+    let numbers = []
+    for (let i = 0; i <= 5; i++) {
+      const value = rn(options)
+      numbers = [...numbers, value]
     }
-    commit('SET_SLOTS', payload)
+    commit('SET_SLOTS', numbers)
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card color="purple">
-      <v-card-title>This Slot Machine works with local data</v-card-title>
+      <v-card-title>This Slot Machine works with Vuex data</v-card-title>
       <v-container fluid>
         <v-layout justify-center>
           <v-flex xs2>
@@ -29,24 +29,26 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      value1: 0,
-      value2: 0,
-      value3: 0,
-      value4: 0,
-      value5: 0
+  computed: {
+    value1() {
+      return this.$store.state.machine.value1
+    },
+    value2() {
+      return this.$store.state.machine.value2
+    },
+    value3() {
+      return this.$store.state.machine.value3
+    },
+    value4() {
+      return this.$store.state.machine.value4
+    },
+    value5() {
+      return this.$store.state.machine.value5
     }
   },
   methods: {
     spin() {
-      const min = 1
-      const max = 6
-      this.value1 = Math.floor(Math.random() * (+max - +min)) + +min
-      this.value2 = Math.floor(Math.random() * (+max - +min)) + +min
-      this.value3 = Math.floor(Math.random() * (+max - +min)) + +min
-      this.value4 = Math.floor(Math.random() * (+max - +min)) + +min
-      this.value5 = Math.floor(Math.random() * (+max - +min)) + +min
+      this.$store.dispatch('machine/spin')
     }
   }
 }

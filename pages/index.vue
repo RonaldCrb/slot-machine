@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Slot Machine</h1>
+    <h1>Welcome to the Rons slot machine!</h1>
     <SlotMachine />
   </div>
 </template>

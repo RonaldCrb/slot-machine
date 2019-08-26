@@ -1,26 +1,42 @@
 <template>
   <div>
     <v-card color="purple">
-      <v-card-title>This Slot Machine works with local data</v-card-title>
       <v-container fluid>
-        <v-layout justify-center>
-          <v-flex xs2>
-            <h1 class="text-xs-center">{{ value1 }}</h1>
+        <v-layout wrap justify-center>
+          <v-flex xs12>
+            <v-card-title
+              ><h2 class="text-center black--text">
+                This Slot Machine works with local state
+              </h2></v-card-title
+            >
           </v-flex>
-          <v-flex xs2>
-            <h1 class="text-xs-center">{{ value2 }}</h1>
+          <v-flex xs2 pa-2 ma-2>
+            <v-card color="yellow">
+              <h1 class="text-center black--text">{{ value1 }}</h1>
+            </v-card>
           </v-flex>
-          <v-flex xs2>
-            <h1 class="text-xs-center">{{ value3 }}</h1>
+          <v-flex xs2 pa-2 ma-2>
+            <v-card color="yellow">
+              <h1 class="text-center black--text">{{ value2 }}</h1>
+            </v-card>
           </v-flex>
-          <v-flex xs2>
-            <h1 class="text-xs-center">{{ value4 }}</h1>
+          <v-flex xs2 pa-2 ma-2>
+            <v-card color="yellow">
+              <h1 class="text-center black--text">{{ value3 }}</h1>
+            </v-card>
           </v-flex>
-          <v-flex xs2>
-            <h1 class="text-xs-center">{{ value5 }}</h1>
+          <v-flex xs2 pa-2 ma-2>
+            <v-card color="yellow">
+              <h1 class="text-center black--text">{{ value4 }}</h1>
+            </v-card>
           </v-flex>
-          <v-flex xs2>
-            <v-btn dark color="yellow" @click="spin">spin</v-btn>
+          <v-flex xs2 pa-2 ma-2>
+            <v-card color="yellow">
+              <h1 class="text-center black--text">{{ value5 }}</h1>
+            </v-card>
+          </v-flex>
+          <v-flex xs2 pa-2 ma-2>
+            <v-btn class="black--text" color="yellow" @click="spin">spin</v-btn>
           </v-flex>
         </v-layout>
       </v-container>

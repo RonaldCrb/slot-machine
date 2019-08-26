@@ -19,7 +19,7 @@ export const mutations = {
 
 export const actions = {
   spin({ commit }) {
-    const options = { min: 1, max: 6, integer: true }
+    const options = { min: 1, max: 5, integer: true }
     let numbers = []
     for (let i = 0; i <= 5; i++) {
       const value = rn(options)

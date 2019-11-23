@@ -16,7 +16,8 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "howler": "^2.1.2",
     "nuxt": "^2.0.0",
-    "random-number": "0.0.9"
+    "random-number": "0.0.9",
+    "sweetalert2": "^9.4.0"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.0.0",

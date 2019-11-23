@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     spin() {
-      Howler.volume(0)
+      Howler.volume(0.5)
       const sound = new Howl({
         src: ['https://webiserver.herokuapp.com/public/sound.mp3']
       })
